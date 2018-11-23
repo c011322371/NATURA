@@ -1,0 +1,163 @@
+@import "./_reset.scss";
+// ----------------------------------------
+// variable
+// ----------------------------------------
+// font size
+$f_nomal: 14px;
+$f_large: 16px;
+
+$header_height: 45px;
+
+@mixin anime {
+  transition: 0.3s;
+}
+
+// ----------------------------------------
+// body
+// ----------------------------------------
+body {
+  font-size: $f_nomal;
+  line-height: 1.4;
+  font-family: YuMinchoW, YuMinchoM, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+}
+
+.contents-background {
+  @include anime;
+}
+
+// ----------------------------------------
+// header
+// ----------------------------------------
+
+.header-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: $header_height;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2);
+  @include anime;
+  .logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: $header_height;
+    height: 100%;
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 30px;
+      height: 30px;  
+    }
+  }
+}
+.gnav {
+  .humberger-menu {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    margin: auto;
+    width: $header_height;
+    height: $header_height;
+    &:after {
+      content: 'MENU';
+      width: 100%;
+      font-size: 10px;
+      color: #666666;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      font-family: sans-serif;
+    }
+  }
+  .humberger-menu-top,
+  .humberger-menu-bottom {
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: #999999;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    @include anime;
+  }
+  .humberger-menu-top {
+    top: 15px;
+  }
+  .humberger-menu-bottom {
+    top: 25px;
+  }
+}
+
+.humberger-inner {
+  position: absolute;
+  top: $header_height + 3px;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: #222222;
+  @include anime;
+  transform: translateX(100%);
+}
+
+.navlist {
+  margin: 15px 35px;
+  font-size: $f_large;
+  > li {
+    position: relative;
+    padding: 20px 10px;
+    border-bottom: solid 1px #ccc;
+    color: #FFFFFF;
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+      content: "\f105";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      color: #666666;
+    }
+  }
+}
+
+//------------- nav active mode style ----------------
+.App.isNavActive {
+  .contents-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1;
+  }
+  .humberger-menu {
+    &:after {
+      content: 'CLOSE';
+    }
+  }
+  .humberger-menu-top,
+  .humberger-menu-bottom {
+    top: 20px;
+  }
+  .humberger-menu-top {
+    transform: rotate(45deg);
+  }
+  .humberger-menu-bottom {
+    transform: rotate(-45deg);
+  }
+  .humberger-inner {
+    display: block;
+    transform: translateX(0);
+  }
+}

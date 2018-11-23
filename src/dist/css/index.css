@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+body {
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: YuMinchoW, YuMinchoM, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif; }
+
+.contents-background {
+  transition: 0.3s; }
+
+.header-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 45px;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.3s; }
+  .header-inner .logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 45px;
+    height: 100%; }
+    .header-inner .logo img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 30px;
+      height: 30px; }
+
+.gnav .humberger-menu {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: 0;
+  margin: auto;
+  width: 45px;
+  height: 45px; }
+  .gnav .humberger-menu:after {
+    content: 'MENU';
+    width: 100%;
+    font-size: 10px;
+    color: #666666;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-family: sans-serif; }
+
+.gnav .humberger-menu-top,
+.gnav .humberger-menu-bottom {
+  width: 20px;
+  height: 2px;
+  display: block;
+  background-color: #999999;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transition: 0.3s; }
+
+.gnav .humberger-menu-top {
+  top: 15px; }
+
+.gnav .humberger-menu-bottom {
+  top: 25px; }
+
+.humberger-inner {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: #222222;
+  transition: 0.3s;
+  transform: translateX(100%); }
+
+.navlist {
+  margin: 15px 35px;
+  font-size: 16px; }
+  .navlist > li {
+    position: relative;
+    padding: 20px 10px;
+    border-bottom: solid 1px #ccc;
+    color: #FFFFFF; }
+    .navlist > li:after {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+      content: "\f105";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      color: #666666; }
+
+.App.isNavActive .contents-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1; }
+
+.App.isNavActive .humberger-menu:after {
+  content: 'CLOSE'; }
+
+.App.isNavActive .humberger-menu-top,
+.App.isNavActive .humberger-menu-bottom {
+  top: 20px; }
+
+.App.isNavActive .humberger-menu-top {
+  transform: rotate(45deg); }
+
+.App.isNavActive .humberger-menu-bottom {
+  transform: rotate(-45deg); }
+
+.App.isNavActive .humberger-inner {
+  display: block;
+  transform: translateX(0); }
