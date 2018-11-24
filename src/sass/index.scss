@@ -103,7 +103,7 @@ body {
   top: $header_height + 3px;
   right: 0;
   width: 80%;
-  height: 100vh;
+  height: calc(100vh - ( #{$header_height} + 3px ));
   background-color: #222222;
   @include anime;
   transform: translateX(100%);
@@ -115,7 +115,7 @@ body {
   > li {
     position: relative;
     padding: 20px 10px;
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #333333;
     color: #FFFFFF;
     &:after {
       position: absolute;
@@ -128,6 +128,15 @@ body {
       color: #666666;
     }
   }
+}
+
+.nav-inner-share {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  border-top: solid 1px #333;
 }
 
 //------------- nav active mode style ----------------
@@ -159,5 +168,39 @@ body {
   .humberger-inner {
     display: block;
     transform: translateX(0);
+  }
+}
+
+//------------- sns style ----------------
+.snslist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: auto;
+  padding: 30px 5px;
+  font-size: 40px;
+  > li {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      .fa-facebook {
+        color: #34569D;
+      }
+      .fa-twitter-square {
+        color: #00A2F9;
+      }
+      .fa-envelope-square {
+        color: #AF3535;
+      }
+      .fa-line {
+        color: #00B700;
+      }
+    }
   }
 }

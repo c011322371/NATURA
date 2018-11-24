@@ -1,0 +1,16 @@
+{
+  "navigation": [
+    {
+      "href": "#about",
+      "title": "NATURAについて"
+    },
+    {
+      "href": "#gallery",
+      "title": "フォトギャラリー"
+    },
+    {
+      "href": "#contact",
+      "title": "お問い合わせ"
+    }
+  ]
+}

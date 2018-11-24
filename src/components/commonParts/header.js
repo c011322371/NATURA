@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../assetts/images/natura-logo.svg';
+import SnsContents from './sns';
+import data from '../../data.json';
 
 class HeaderContents extends Component {
   constructor(props) {
@@ -22,10 +24,13 @@ class HeaderContents extends Component {
             </a>
             <div className="humberger-inner">
               <ul className="navlist">
-                <li><a href="#about">NATURAについて</a></li>
-                <li><a href="#gallery">フォトギャラリー</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
+                {data.navigation.map((data) => {
+                  return <li><a href={data.href}>{data.title}</a></li>;
+                })}
               </ul>
+              <div className="nav-inner-share">
+                <SnsContents />
+              </div>
             </div>
           </nav>
         </div>
