@@ -1,16 +1,25 @@
 {
   "navigation": [
     {
+      "id": "about",
       "href": "#about",
       "title": "NATURAについて"
     },
     {
+      "id": "gallery",
       "href": "#gallery",
       "title": "フォトギャラリー"
     },
     {
+      "id": "contact",
       "href": "#contact",
       "title": "お問い合わせ"
+    }
+  ],
+  "kv_images": [
+    {
+      "id": "sf1",
+      "path": "../assetts/images/sunflower/sf1.jpg"
     }
   ]
 }

@@ -25,7 +25,7 @@ class HeaderContents extends Component {
             <div className="humberger-inner">
               <ul className="navlist">
                 {data.navigation.map((data) => {
-                  return <li><a href={data.href}>{data.title}</a></li>;
+                  return <li key={data.id}><a href={data.href}>{data.title}</a></li>
                 })}
               </ul>
               <div className="nav-inner-share">
