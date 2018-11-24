@@ -212,10 +212,13 @@ body {
   position: relative; }
 
 .kv-list > li {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  opacity: 0;
+  transition: 1.6s;
+  transform: scale(1); }
   .kv-list > li img {
     position: absolute;
     top: 0;
@@ -226,7 +229,13 @@ body {
     height: 100%;
     width: auto; }
 
+.kv-list > li.isActive {
+  opacity: 1; }
+
 .kv-info-contents {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   color: #FFFFFF;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
@@ -243,6 +252,7 @@ body {
   bottom: 60px;
   left: 20px;
   font-size: 24px;
-  height: 400px;
+  height: 420px;
   line-height: 2;
-  text-indent: 1rem; }
+  text-indent: 1rem;
+  letter-spacing: 3px; }
