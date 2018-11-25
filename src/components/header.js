@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from '../../assetts/images/natura-logo.svg';
+import logo from '../assetts/images/natura-logo.svg';
 import SnsContents from './sns';
-import data from '../../data.json';
+import data from '../data.json';
 
 class HeaderContents extends Component {
   constructor(props) {

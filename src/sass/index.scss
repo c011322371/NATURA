@@ -5,6 +5,7 @@
 // font size
 $f_nomal: 14px;
 $f_large: 16px;
+$f_x_large: 18px;
 
 $header_height: 45px;
 
@@ -34,6 +35,10 @@ body {
 
 .contents-background {
   @include anime;
+}
+
+.contentWrapper {
+  padding: 0 12px;
 }
 
 // ----------------------------------------
@@ -227,7 +232,7 @@ main {
 // kv
 // ----------------------------------------
 .kv {
-
+  height: 100vh;
 }
 .kv-contents {
 
@@ -262,38 +267,80 @@ main {
 
 .kv-info-contents {
   position: relative;
-  width: 100%;
-  height: 100vh;
   color: #FFFFFF;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  text-shadow: 0px 4px 8px #222222;
-  h1 {
+  font-size: 24px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
+  text-shadow: 0 0px 12px #000;
+  h1.kv-info-head {
     position: absolute;
     top: 80px;
-    right: 40px;
-    font-size: 24px;
+    left: 20px;
+    .kv-info-head-child1 {
+      font-size: 18px;
+    }
+    .kv-info-head-child2 {
+      font-size: 42px;
+      font-weight: bold;
+    }
   }
 }
-
-.kv-description {
-  position: absolute;
-  bottom: 60px;
-  left: 20px;
-  height: 240px;
-  line-height: 2;
-  text-indent: 1rem;
-  letter-spacing: 3px;
+// ----------------------------------------
+// section
+// ----------------------------------------
+.section-title {
+  padding: 30px;
+  border-bottom: solid 1px #ccc;
+  font-size: $f_x_large;
+  font-weight: bold;
+  text-align: center;
 }
-// ----------------------------------------
-// body
-// ----------------------------------------
+
+// todo 消す
+.about-contents,
+.gallery-contents,
+.contact-contents {
+  border: solid 1px #ccc;
+  padding: 100px 0;
+}
 
 // ----------------------------------------
-// body
+// about
 // ----------------------------------------
+.about {
+
+}
+.about-contents {
+
+}
 
 // ----------------------------------------
-// body
+// gallery
 // ----------------------------------------
+.gallery {
+
+}
+.gallery-contents {
+
+}
+
+
+// ----------------------------------------
+// contact
+// ----------------------------------------
+.contact {
+
+}
+.contact-contents {
+
+}
+
+// ----------------------------------------
+// footer
+// ----------------------------------------
+footer {
+    padding: 15px 0;
+    background-color: #222222;
+    color: #FFFFFF;
+    text-align: center;
+}
