@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import HeaderContents from './header';
 import data from '../data.json';
-import kvItem01 from "../assetts/images/sunflower/sf1.jpg";
-import kvItem02 from "../assetts/images/sunflower/sf2.jpg";
-import kvItem03 from "../assetts/images/sunflower/sf3.jpg";
-import kvItem04 from "../assetts/images/sunflower/sf4.jpg";
-import kvItem05 from "../assetts/images/sunflower/sf5.jpg";
+import kvItem01 from "../assetts/images/sunflower/sf8.jpg";
+import kvItem02 from "../assetts/images/sunflower/sf6.jpg";
+import kvItem03 from "../assetts/images/sunflower/sf5.jpg";
+import kvItem04 from "../assetts/images/sunflower/sf12.jpg";
+import kvItem05 from "../assetts/images/sunflower/sf10.jpg";
 
 class KvContents extends Component {
   constructor(props) {
     super(props);
     this.init();
   }
-  init(){
+  init() {
     this.state = {
       timer_count: 0
     };
@@ -40,8 +40,10 @@ class KvContents extends Component {
   }
   render() {
     const lists = this.kvImageUrls.map((url, index) => {
-			return <li key={index} className={index == this.state.timer_count ? 'isActive' : ''}><img src={url} /></li>
-		});
+      return (
+        <li key={index} className={index == this.state.timer_count ? 'isActive' : ''} style={{backgroundImage: "url('"+url+"')"}}></li>
+      );
+    });
     return (
       <section className="kv">
         <div className="kv-contents">

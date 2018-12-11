@@ -224,16 +224,22 @@ body {
   overflow: hidden;
   opacity: 0;
   transition: 1.6s;
-  transform: scale(1); }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
   .kv-list > li img {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: auto;
-    height: 100%;
-    width: auto; }
+    margin: auto; }
+    .kv-list > li img.isVertical {
+      height: 100%;
+      width: auto; }
+    .kv-list > li img.isSide {
+      height: auto;
+      width: 100%; }
 
 .kv-list > li.isActive {
   opacity: 1; }

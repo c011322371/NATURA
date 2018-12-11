@@ -248,7 +248,9 @@ main {
     overflow: hidden;
     opacity: 0;
     transition: 1.6s;
-    transform: scale(1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     img {
       position: absolute;
       top: 0;
@@ -256,8 +258,14 @@ main {
       bottom: 0;
       left: 0;
       margin: auto;
-      height: 100%;
-      width: auto;
+      &.isVertical {
+        height: 100%;
+        width: auto;
+      }
+      &.isSide {
+        height: auto;
+        width: 100%;
+      }
     }
   }
   > li.isActive {
